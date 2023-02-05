@@ -2,10 +2,10 @@
   "name": "middle-front-ya-practicum",
   "version": "1.0.0",
   "description": "",
-  "source": "src/index.html",
+  "source": "index.html",
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Natalie-er/middle-front-ya-practicum#readme",
   "devDependencies": {
     "@parcel/transformer-inline-string": "^2.8.2",
+    "@parcel/transformer-sass": "^2.8.2",
     "assert": "^2.0.0",
     "events": "^3.3.0",
     "os-browserify": "^0.3.0",

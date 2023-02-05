@@ -1,6 +1,6 @@
 import Handlebars from "handlebars";
 import tpl from 'bundle-text:./index.hbs';
-// import './style.css'
+import './style.scss'
 
 const comp = Handlebars.compile(tpl);
 const res = comp({
