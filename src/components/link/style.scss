@@ -1,0 +1,10 @@
+@import '/src/utils/variables.scss';
+
+.link {
+    color: $blue-color;
+    @include font($fs-small);
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

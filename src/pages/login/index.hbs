@@ -1,0 +1,14 @@
+<div class="modal">
+    <form class="modal__inner">
+        <h1 class="modal__head text-h1">Вход</h1>
+        <div>testData: {{ testData }}</div>
+        <div class="modal__body">
+            {{> Input label='Логин' }}
+            {{> Input label='Пароль' type='password' }}
+        </div>
+        <div class="modal__footer">
+            {{> Button text='Авторизоваться' }}
+            {{> Link href='#signin' text='Нет аккаунта?' }}
+        </div>
+    </form>
+</div>

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap');
+@import './variables.scss';
+
+:root {
+    --btn-padding: 12px;
+}
+
+body {
+    @include font();
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+ 
+    &:not([class]) {
+        color: inherit;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }   
+}

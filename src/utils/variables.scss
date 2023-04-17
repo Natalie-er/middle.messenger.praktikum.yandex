@@ -1,0 +1,19 @@
+$font-family: 'Inter';
+$fs-small: 11px;
+$fs-default: 12px;
+$fs-middle: 13px;
+
+$white-color: #ffffff;
+$black-color: #1e1e1e;
+$gray-color: #999999;
+$blue-color: #3369f3;
+$light-blue-color: #E4EDFD;
+$dark-blue-color: #385398;
+
+@mixin font($size: $fs-default) {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 500;
+    font-size: $size;
+    line-height: 1;
+}

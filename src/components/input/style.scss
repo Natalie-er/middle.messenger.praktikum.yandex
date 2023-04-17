@@ -1,0 +1,19 @@
+@import '/src/utils/variables.scss';
+
+.input-label {
+    position: relative;
+    color: $black-color;
+    font-size: $fs-middle;
+}
+
+.input {
+    background-color: transparent;
+    border: none;
+    color: $black-color;
+}
+
+.input-text {
+    position: absolute;
+    left: 0;
+    color: $gray-color;
+}
