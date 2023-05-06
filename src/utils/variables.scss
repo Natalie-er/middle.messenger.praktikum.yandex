@@ -1,7 +1,12 @@
 $font-family: 'Inter';
-$fs-small: 11px;
-$fs-default: 12px;
+$fs-h1: 20px;
+$fs-h2: 16px;
+$fs-h3: 15px;
 $fs-middle: 13px;
+$fs-default: 12px;
+$fs-small: 11px;
+$fs-min: 9px;
+$fs-micro: 8px;
 
 $white-color: #ffffff;
 $black-color: #1e1e1e;
@@ -9,11 +14,12 @@ $gray-color: #999999;
 $blue-color: #3369f3;
 $light-blue-color: #E4EDFD;
 $dark-blue-color: #385398;
+$error-color: #ff2f2f;
 
-@mixin font($size: $fs-default) {
+@mixin font($fs: $fs-default, $fw: 500) {
     font-family: $font-family;
     font-style: normal;
-    font-weight: 500;
-    font-size: $size;
+    font-weight: $fw;
+    font-size: $fs;
     line-height: 1;
 }

@@ -1,0 +1,75 @@
+@import '/src/utils/variables.scss';
+
+.form-field {
+    display: block;
+    padding: 9px 0 0;
+    margin-bottom: 16px;
+    color: $black-color;
+    @include font($fs-middle);
+
+    &__inner {
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            transition: 0.3s;
+        }
+
+        &::before {
+            width: 100%;
+            background-color: $blue-color;
+        }
+
+        &::after {
+            width: 0;
+            background-color: $dark-blue-color;
+        }
+
+        &:hover,
+        &:focus {
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+
+    &__input {
+        width: 100%;
+        padding: 7px 0;
+        background-color: transparent;
+        border: none;
+        color: $black-color;
+        @include font($fs-middle);
+
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 7px 0;
+        color: $gray-color;
+        transition: 0.3s;
+    }
+
+    &__error {
+        display: inline-block;
+        margin-top: 7px;
+        @include font($fs-micro, 400);
+        color: $error-color;
+    }
+}
+
+.form-field--has-value .form-field__label, // TODO add class
+.form-field__input:focus:not([readonly]) + .form-field__label {
+    transform: translateY(-100%);
+    font-size: $fs-min;
+}
