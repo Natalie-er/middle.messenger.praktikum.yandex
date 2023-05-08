@@ -4,9 +4,16 @@ import './style.scss';
 
 interface ButtonProps {
     text: String;
+    type?: 'button' | 'submit';
     classes?: string;
 }
 
-const Button = (props: ButtonProps) => Handlebars.compile(button)(props);
+const Button = (props: ButtonProps) => {
+    if (!props.type) {
+        props.type = 'button';
+    }
+
+    return Handlebars.compile(button)(props);
+};
 
 export default Button;

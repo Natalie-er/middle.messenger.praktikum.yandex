@@ -5,14 +5,19 @@ import './style.scss';
 interface FormFieldProps {
     id: string;
     label: String;
-    type: string;
+    type?: string;
+    name: string;
     classes?: string;
     inputClasses?: string;
     labelClasses?: string;
     error?: string;
+    require?: boolean; // TODO
 }
 
-const FormField = ({ type = 'text', ...props }: FormFieldProps) => {
+const FormField = (props: FormFieldProps) => {
+    if (!props.type) {
+        props.type = 'text';
+    }
     return Handlebars.compile(tpl)(props);
 };
 

@@ -11,6 +11,6 @@ Handlebars.registerPartial('Button', Button);
 Handlebars.registerPartial('Link', Link);
 
 const comp = Handlebars.compile(tpl);
-const LoginPage = comp({});
+const SignupPage = comp({});
 
-export default LoginPage;
+export default SignupPage;

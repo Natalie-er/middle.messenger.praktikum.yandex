@@ -1,14 +1,17 @@
 // import Handlebars, { log } from 'handlebars';
 import './utils/style.scss';
-import loginPage from './pages/login';
-// import signupPage from './pages/signup';
+import MainPage from './pages/main';
+import LoginPage from './pages/login';
+import SignupPage from './pages/signup';
 
-let tpl = loginPage;
-// const path = document.location.pathname.slice(1);
+let tpl = MainPage;
+const path = document.location.pathname.slice(1);
 
-// if (path === 'signup') {
-//     tpl = signupPage;
-// }
+if (path === 'login') {
+    tpl = LoginPage;
+} else if (path === 'signup') {
+    tpl = SignupPage;
+}
 
 window.addEventListener('DOMContentLoaded', () => {
     const rootElement = document.getElementById('root');
