@@ -6,14 +6,14 @@
     max-width: 280px;
     padding: var(--btn-padding);
     border-radius: 8px;
-    background-color: $blue-color;
+    background-color: $main-color;
     color: $white-color;
     text-align: center;
     @include font($fs-middle);
     transition: color 0.3s;
 
     &:hover {
-        background-color: rgba($blue-color, 0.8);
+        background-color: rgba($main-color, 0.8);
     }
 
     &:disabled {

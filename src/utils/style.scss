@@ -51,11 +51,6 @@ h5,
     margin: 0;
 }
 
-.text-red,
-a.text-red {
-    color: $red-color;
-}
-
 .text-center {
     text-align: center;
 }
@@ -66,7 +61,7 @@ button {
     cursor: pointer;
 
     &:focus-visible {
-        outline: $dark-blue-color solid 2px;
+        outline: $main-color-light solid 2px;
     }
 }
 
