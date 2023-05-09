@@ -1,0 +1,140 @@
+<div class="profile">
+    <button type="button" class="profile__back">
+        <div class="profile__back-icon">
+            <image src="{{arrow}}"></image>
+        </div>
+    </button>
+    <div class="profile__page">
+        <div class="profile__head">
+            <div class="profile__picture">
+                <image src="{{avatar}}" class="profile__picture-image"></image>
+                {{#if defaultMode}}
+                    <button type="button" class="profile__picture-btn">Поменять аватар</button>
+                {{/if}}
+            </div>
+            {{#if defaultMode}}
+                <div class="profile__name text-h2">{{nickname}}</div>
+            {{/if}}
+        </div>
+        <div class="profile__body">
+            {{#if changePasswordMode}}
+                <div class="profile__list">
+                    <div class="profile__row">
+                        <div class="profile__cell">Старый пароль</div>
+                        <div class="profile__cell">
+                            {{#if changePasswordMode}}
+                                {{> FormField id='oldPassword' name='oldPassword' type='password' value=password simpleMode='{{true}}' }}
+                            {{else}}
+                                {{password}}
+                            {{/if}}
+                        </div>
+                    </div>
+                    <div class="profile__row">
+                        <div class="profile__cell">Новый пароль</div>
+                        <div class="profile__cell">
+                            {{#if changePasswordMode}}
+                                {{> FormField id='newPassword' name='newPassword' type='password' value=newPassword simpleMode='{{true}}' }}
+                            {{else}}
+                                {{newPassword}}
+                            {{/if}}
+                        </div>
+                    </div>
+                    <div class="profile__row">
+                        <div class="profile__cell">Повторите новый пароль</div>
+                        <div class="profile__cell">
+                            {{#if changePasswordMode}}
+                                {{> FormField id='newPasswordConfirm' name='newPasswordConfirm' type='password' value=newPasswordConfirm simpleMode='{{true}}' }}
+                            {{else}}
+                                {{newPasswordConfirm}}
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            {{else}}
+                <div class="profile__list">
+                    <div class="profile__row">
+                        <div class="profile__cell">Почта</div>
+                        <div class="profile__cell">
+                            {{#if changeDataMode}}
+                                {{> FormField id='email' name='email' type='email' value=email simpleMode='{{true}}' }}
+                            {{else}}
+                                {{email}}
+                            {{/if}}
+                        </div>
+                    </div>
+                    <div class="profile__row">
+                        <div class="profile__cell">Логин</div>
+                        <div class="profile__cell">
+                            {{#if changeDataMode}}
+                                {{> FormField id='login' name='login' value=login simpleMode='{{true}}' }}
+                            {{else}}
+                                {{login}}
+                            {{/if}}
+                        </div>
+                    </div>
+                    <div class="profile__row">
+                        <div class="profile__cell">Имя</div>
+                        <div class="profile__cell">
+                            {{#if changeDataMode}}
+                                {{> FormField id='first_name' name='first_name' value=firstName simpleMode='{{true}}' }}
+                            {{else}}
+                                {{firstName}}
+                            {{/if}}
+                        </div>
+                    </div>
+                    <div class="profile__row">
+                        <div class="profile__cell">Фамилия</div>
+                        <div class="profile__cell">
+                            {{#if changeDataMode}}
+                                {{> FormField id='second_name' name='second_name' value=secondName simpleMode='{{true}}' }}
+                            {{else}}
+                                {{secondName}}
+                            {{/if}}
+                        </div>
+                    </div>
+                    <div class="profile__row">
+                        <div class="profile__cell">Имя в чате</div>
+                        <div class="profile__cell">
+                            {{#if changeDataMode}}
+                                {{> FormField id='display_name' name='display_name' value=displayName simpleMode='{{true}}' }}
+                            {{else}}
+                                {{displayName}}
+                            {{/if}}
+                        </div>
+                    </div>
+                    <div class="profile__row">
+                        <div class="profile__cell">Телефон</div>
+                        <div class="profile__cell">
+                            {{#if changeDataMode}}
+                                {{> FormField id='phone' name='phone' type='tel' value=phone simpleMode='{{true}}' }}
+                            {{else}}
+                                {{phone}}
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            {{/if}}
+        </div>
+        {{#if defaultMode}}
+            <div class="profile__footer">
+                <div class="profile__list">
+                    <div class="profile__row">
+                        {{> Link href='?change-data' text='Изменить данные' }}
+                    </div>
+                    <div class="profile__row">
+                        {{> Link href='?change-password' text='Изменить пароль' }}
+                    </div>
+                    <div class="profile__row">
+                        {{> Link href='/' text='Выйти' classes='text-red' }}
+                    </div>
+                </div>
+            </div>
+        {{else}}
+            <div class="profile__footer text-center">
+                <div>
+                    <a href="/profile" class="btn">Сохранить</a>
+                </div>
+            </div>
+        {{/if}}
+    </div>
+</div>

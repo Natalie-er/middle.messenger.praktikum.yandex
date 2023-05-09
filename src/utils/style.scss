@@ -39,10 +39,35 @@ h1,
     margin: 0;
 }
 
+h2,
+.text-h2 {
+    @include font($fs-h2, 600);
+    margin: 0;
+}
+
 h5,
 .text-h5 {
     @include font($fs-small);
     margin: 0;
+}
+
+.text-red,
+a.text-red {
+    color: $red-color;
+}
+
+.text-center {
+    text-align: center;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    &:focus-visible {
+        outline: $dark-blue-color solid 2px;
+    }
 }
 
 form {
@@ -68,10 +93,14 @@ form {
         max-width: calc(100vw - 20px);
         width: 340px;
         min-height: 460px;
-        padding: 50px 30px 30px 30px;
+        padding: 50px 30px 30px;
         background: $white-color;
         box-shadow: var(--shadow);
         border-radius: var(--radius);
+
+        @media (max-width: ($bp-tablet - 1)) {
+            padding: 50px 15px 30px;
+        }
     }
 
     &__head {

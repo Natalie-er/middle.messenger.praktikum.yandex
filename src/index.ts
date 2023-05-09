@@ -3,6 +3,7 @@ import './utils/style.scss';
 import MainPage from './pages/main';
 import LoginPage from './pages/login';
 import SignupPage from './pages/signup';
+import ProfilePage from './pages/profile';
 import Page404 from './pages/page404';
 import Page500 from './pages/page500';
 
@@ -15,6 +16,9 @@ switch (path) {
         break;
     case 'signup':
         tpl = SignupPage;
+        break;
+    case 'profile':
+        tpl = ProfilePage;
         break;
     case '404':
         tpl = Page404;

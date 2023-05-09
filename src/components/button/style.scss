@@ -1,23 +1,19 @@
 @import '/src/utils/variables.scss';
 
 .btn {
+    display: inline-block;
     width: 100%;
     max-width: 280px;
     padding: var(--btn-padding);
-    border: none;
     border-radius: 8px;
     background-color: $blue-color;
     color: $white-color;
+    text-align: center;
     @include font($fs-middle);
-    cursor: pointer;
     transition: color 0.3s;
 
     &:hover {
         background-color: rgba($blue-color, 0.8);
-    }
-
-    &:focus-visible {
-        outline: $dark-blue-color solid 2px;
     }
 
     &:disabled {

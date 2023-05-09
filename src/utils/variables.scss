@@ -11,10 +11,16 @@ $fs-micro: 8px;
 $white-color: #ffffff;
 $black-color: #1e1e1e;
 $gray-color: #999999;
+$light-gray-color: #efefef;
+$border-color: #eaeaea;
+$gray-red-color: #fbfbfb;
 $blue-color: #3369f3;
-$light-blue-color: #E4EDFD;
+$light-blue-color: #e4edfd;
 $dark-blue-color: #385398;
+$red-color: #ff0000;
 $error-color: #ff2f2f;
+
+$bp-tablet: 768px;
 
 @mixin font($fs: $fs-default, $fw: 500) {
     font-family: $font-family;

@@ -7,6 +7,8 @@ interface FormFieldProps {
     label: String;
     type?: string;
     name: string;
+    value?: string;
+    simpleMode?: boolean;
     classes?: string;
     inputClasses?: string;
     labelClasses?: string;
@@ -17,6 +19,12 @@ interface FormFieldProps {
 const FormField = (props: FormFieldProps) => {
     if (!props.type) {
         props.type = 'text';
+    }
+    if (!props.classes) {
+        props.classes = '';
+    }
+    if (props.simpleMode) {
+        props.classes += ' form-field--simple ';
     }
     return Handlebars.compile(tpl)(props);
 };

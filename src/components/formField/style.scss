@@ -30,7 +30,7 @@
         padding: 7px 0;
         background-color: transparent;
         border: none;
-        color: $black-color;
+        color: inherit;
         @include font($fs-middle);
 
         &:focus-visible {
@@ -52,6 +52,21 @@
         margin-top: 7px;
         @include font($fs-micro, 400);
         color: $error-color;
+    }
+
+    &--simple {
+        margin: 0;
+        padding: 0;
+        color: inherit;
+    }
+
+    &--simple &__inner::before {
+        display: none;
+    }
+
+    &--simple &__input {
+        padding: 0;
+        text-align: right;
     }
 }
 

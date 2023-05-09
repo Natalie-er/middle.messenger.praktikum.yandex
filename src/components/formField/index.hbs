@@ -4,12 +4,15 @@
             id="{{id}}"
             type="{{type}}"
             name="{{name}}"
+            value="{{value}}"
             class="form-field__input {{inputClasses}}"
         />
-        <label
-            for="{{id}}"
-            class="form-field__label {{labelClasses}}"
-        >{{label}}</label>
+        {{#if label}}
+            <label
+                for="{{id}}"
+                class="form-field__label {{labelClasses}}"
+            >{{label}}</label>
+        {{/if}}
     </div>
     {{#if error}}
         <span class="form-field__error">{{error}}</span>
