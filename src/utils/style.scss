@@ -69,14 +69,7 @@ form {
     margin: 0;
 }
 
-// TODO вынести в отдельный модуль
-// modal
 .modal {
-    // TODO
-    // position: fixed;
-    // top: 0;
-    // left: 0;
-    // width: 100vw;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -119,7 +112,6 @@ form {
     }
 }
 
-// TODO вынести в отдельный модуль
 .error-page {
     min-height: 100vh;
     display: flex;

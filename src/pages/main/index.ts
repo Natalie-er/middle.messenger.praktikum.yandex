@@ -1,5 +1,5 @@
 import Handlebars from 'handlebars';
-import tpl from 'bundle-text:./index.hbs'; // TODO type
+import tpl from 'bundle-text:./index.hbs';
 import '/src/utils/style.scss';
 
 const comp = Handlebars.compile(tpl);

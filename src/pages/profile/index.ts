@@ -1,5 +1,5 @@
 import Handlebars from 'handlebars';
-import tpl from 'bundle-text:./index.hbs'; // TODO type
+import tpl from 'bundle-text:./index.hbs';
 import '/src/utils/style.scss';
 import './style.scss';
 
@@ -28,7 +28,6 @@ const ProfilePage = comp({
     displayName: 'Иван',
     phone: '+7 (909) 967 30 30',
     password: '9999999999',
-    // TODO
     avatar: pictureSvg,
     arrow: arrowSvg,
     defaultMode,

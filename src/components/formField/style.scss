@@ -70,7 +70,7 @@
     }
 }
 
-.form-field--has-value .form-field__label, // TODO add class
+.form-field--has-value .form-field__label,
 .form-field__input:focus + .form-field__label {
     transform: translateY(-100%);
     font-size: $fs-min;

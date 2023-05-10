@@ -13,7 +13,6 @@ interface FormFieldProps {
     inputClasses?: string;
     labelClasses?: string;
     error?: string;
-    require?: boolean; // TODO
 }
 
 const FormField = (props: FormFieldProps) => {
