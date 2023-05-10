@@ -13,4 +13,9 @@ Handlebars.registerPartial('Link', Link);
 const comp = Handlebars.compile(tpl);
 const SignupPage = comp({});
 
-export default SignupPage;
+window.addEventListener('DOMContentLoaded', () => {
+    const rootElement = document.getElementById('root');
+    if (rootElement) {
+        rootElement.innerHTML = SignupPage;
+    }
+});

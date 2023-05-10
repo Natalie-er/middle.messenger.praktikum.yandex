@@ -4,8 +4,8 @@
   "description": "",
   "source": "index.html",
   "scripts": {
-    "start": "parcel index.html --port 3000",
-    "build": "parcel build index.html"
+    "start": "parcel *.html --port 3000",
+    "build": "parcel build *.html"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
     "util": "^0.12.5"
   },
   "dependencies": {
+    "express": "^4.18.2",
     "handlebars": "^4.7.7"
   }
 }

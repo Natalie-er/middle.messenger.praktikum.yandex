@@ -6,3 +6,10 @@ const comp = Handlebars.compile(tpl);
 const MainPage = comp({});
 
 export default MainPage;
+
+window.addEventListener('DOMContentLoaded', () => {
+    const rootElement = document.getElementById('root');
+    if (rootElement) {
+        rootElement.innerHTML = MainPage;
+    }
+});

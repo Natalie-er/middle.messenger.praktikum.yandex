@@ -13,4 +13,9 @@ Handlebars.registerPartial('Link', Link);
 const comp = Handlebars.compile(tpl);
 const LoginPage = comp({});
 
-export default LoginPage;
+window.addEventListener('DOMContentLoaded', () => {
+    const rootElement = document.getElementById('root');
+    if (rootElement) {
+        rootElement.innerHTML = LoginPage;
+    }
+});

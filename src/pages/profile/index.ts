@@ -36,4 +36,9 @@ const ProfilePage = comp({
     changePasswordMode,
 });
 
-export default ProfilePage;
+window.addEventListener('DOMContentLoaded', () => {
+    const rootElement = document.getElementById('root');
+    if (rootElement) {
+        rootElement.innerHTML = ProfilePage;
+    }
+});

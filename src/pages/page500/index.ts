@@ -9,4 +9,9 @@ Handlebars.registerPartial('Link', Link);
 const comp = Handlebars.compile(tpl);
 const Page500 = comp({});
 
-export default Page500;
+window.addEventListener('DOMContentLoaded', () => {
+    const rootElement = document.getElementById('root');
+    if (rootElement) {
+        rootElement.innerHTML = Page500;
+    }
+});
