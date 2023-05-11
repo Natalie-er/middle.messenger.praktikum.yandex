@@ -4,7 +4,13 @@
             <image src="{{arrow}}"></image>
         </div>
     </button>
-    <div class="profile__page">
+
+    {{#if defaultMode}}
+        <div class="profile__page">
+    {{else}}
+        <form action="" class="profile__page">
+    {{/if}}
+
         <div class="profile__head">
             <div class="profile__picture">
                 <image src="{{avatar}}" class="profile__picture-image"></image>
@@ -131,10 +137,13 @@
             </div>
         {{else}}
             <div class="profile__footer text-center">
-                <div>
-                    <a href="/profile.html" class="btn">Сохранить</a>
-                </div>
+                {{> Button text='Сохранить' type='submit' }}
             </div>
         {{/if}}
-    </div>
+
+    {{#if defaultMode}}
+        </div>
+    {{else}}
+        </form>
+    {{/if}}
 </div>

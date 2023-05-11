@@ -1,12 +1,12 @@
 <div class="modal">
-    <form class="modal__inner">
+    <form action="" class="modal__inner">
         <h1 class="modal__head text-h1">Вход</h1>
         <div class="modal__body">
-            {{> FormField id='login' label='Логин' }}
-            {{> FormField id='password' label='Пароль' type='password' }}
+            {{> FormField id='login' name='login' label='Логин' }}
+            {{> FormField id='password' name='password' label='Пароль' type='password' }}
         </div>
         <div class="modal__footer">
-            {{> Button text='Войти' }}
+            {{> Button text='Войти' type='submit' }}
             {{> Link href='/signup.html' text='Нет аккаунта?' classes='modal__footer-link text-h5' }}
         </div>
     </form>
