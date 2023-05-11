@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap');
+@import './variables.scss';
+
+:root {
+    --btn-padding: 12px;
+
+    --shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    @include font();
+    box-sizing: border-box;
+    color: $black-color;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+    &:not([class]) {
+        color: inherit;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+h1,
+.text-h1 {
+    @include font($fs-h1);
+    margin: 0;
+}
+
+h2,
+.text-h2 {
+    @include font($fs-h2, 600);
+    margin: 0;
+}
+
+h5,
+.text-h5 {
+    @include font($fs-small);
+    margin: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    &:focus-visible {
+        outline: $main-color-light solid 2px;
+    }
+}
+
+form {
+    margin: 0;
+}
+
+.modal {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        max-width: calc(100vw - 20px);
+        width: 340px;
+        min-height: 460px;
+        padding: 50px 30px 30px;
+        background: $white-color;
+        box-shadow: var(--shadow);
+        border-radius: var(--radius);
+
+        @media (max-width: ($bp-tablet - 1)) {
+            padding: 50px 15px 30px;
+        }
+    }
+
+    &__head {
+        align-self: center;
+        margin-bottom: 40px;
+    }
+
+    &__body {
+        flex: 1;
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 47px;
+
+        &-link {
+            margin-top: 14px;
+        }
+    }
+}
+
+.error-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &__title {
+        margin-bottom: 20px;
+        font-size: 40px;
+    }
+
+    &__link {
+        margin-top: 69px;
+    }
+}

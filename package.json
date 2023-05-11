@@ -1,0 +1,37 @@
+{
+  "name": "middle-front-ya-practicum",
+  "version": "1.0.0",
+  "description": "",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel *.html --port 3000",
+    "build": "parcel build *.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Natalie-er/middle-front-ya-practicum.git"
+  },
+  "author": "Natalia Eremeeva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Natalie-er/middle-front-ya-practicum/issues"
+  },
+  "homepage": "https://github.com/Natalie-er/middle-front-ya-practicum#readme",
+  "devDependencies": {
+    "@parcel/transformer-inline-string": "^2.8.2",
+    "@parcel/transformer-sass": "^2.8.2",
+    "assert": "^2.0.0",
+    "events": "^3.3.0",
+    "os-browserify": "^0.3.0",
+    "parcel": "^2.8.2",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "querystring-es3": "^0.2.1",
+    "url": "^0.11.0",
+    "util": "^0.12.5"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "handlebars": "^4.7.7"
+  }
+}
