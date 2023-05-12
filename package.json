@@ -4,7 +4,7 @@
   "description": "",
   "source": "index.html",
   "scripts": {
-    "start": "parcel *.html --port 3000",
+    "start": "parcel build *.html && node ./server.js",
     "build": "parcel build *.html"
   },
   "repository": {
