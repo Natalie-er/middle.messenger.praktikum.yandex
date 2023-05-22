@@ -1,0 +1,9 @@
+@import '/src/utils/variables.scss';
+
+.link {
+    color: $main-color;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

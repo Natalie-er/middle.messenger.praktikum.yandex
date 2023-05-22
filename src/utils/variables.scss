@@ -1,0 +1,29 @@
+$font-family: 'Inter';
+$fs-h1: 20px;
+$fs-h2: 16px;
+$fs-h3: 15px;
+$fs-middle: 13px;
+$fs-default: 12px;
+$fs-small: 11px;
+$fs-min: 9px;
+$fs-micro: 8px;
+
+$black-color: #1e1e1e;
+$gray-color: #999999;
+$light-gray-color: #efefef;
+$border-color: #eaeaea;
+$gray-red-color: #fbfbfb;
+$white-color: #ffffff;
+$main-color: #6db1b1;
+$main-color-light: #dcefe9;
+$error-color: #be6672;
+
+$bp-tablet: 768px;
+
+@mixin font($fs: $fs-default, $fw: 500) {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: 1;
+}
